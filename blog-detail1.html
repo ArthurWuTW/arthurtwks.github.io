@@ -194,10 +194,10 @@
 
 							<p class="stext-117 cl6 p-b-26">
 								This project was to integrate Arduino and laptop in order to build a Smart Assistant at home. I call it Jarvis in Iron man.
-								I found that there’s an Arduino-like open source firmware to help us prototype Iot products : Nodemcu. As an Iot
-								device, it is less than $2 WI-FI MCU ESP8266 integrated and easy to prototyping development kit. And I need a laptop
-								as a central management system. It uses several techniques including speech recognition, web crawler, socket, sqlite,
-								Messenger API written in Python and Nodejs.
+								There’s an Arduino-like open source firmware to help us prototype Iot products : Nodemcu. As an Iot device, it is
+								less than $2 WI-FI MCU ESP8266 integrated and easy to prototyping development kit. And I need a laptop as a central
+								management system. It uses several techniques including speech recognition, web crawler, socket, sqlite, Messenger
+								API written in Python and Nodejs.
 							</p>
 
 							<p class="stext-117 cl6 p-b-26">
@@ -211,30 +211,65 @@
 								<br>  Motor 755
 								<br>  Relay
 								<br>  Power supply
-								<br>  Mechanical component
+								<br>  Nodemcu
 								<br>
-								<br>
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/RPv0TmH_QnU" frameborder="0" allow="autoplay; encrypted-media"
-								 allowfullscreen></iframe>
-								<br>
-								<br> Play music
-								<br>  Chrome package
-								<br>
-								<br> Ask weather & Ask news
-								<br>  Web crawler
-								<br>  crontab
-								<br>
-								<br> Custom setting
-								<br>  know every IP’s
-								<br>
-								<br>
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/zlMHGYwWK4o" frameborder="0" allow="autoplay; encrypted-media"
-								 allowfullscreen></iframe>
+							</p>
+							<h4 class="ltext-109 cl2 p-b-28">
+								Further Application
+							</h4>
+							<p class="stext-117 cl6 p-b-26">
+								When creating a new command, I need to write a new behavior code first in “behavior” directory, and then execute “AddEntryToDataBase.py”
+								to add the new behavior code and corresponding “command” to the database.
 
 							</p>
 
+							<h4 class="ltext-109 cl2 p-b-28">
+								Play music
+							</h4>
+
+							<strong class="stext-117 cl5 p-b-26">
+								import webbrowser
+								<br> webbrowser.open('https://youtu.be/mO_ztLY2U6c?t=9s', new=2)
+							</strong>
+							<p class="stext-117 cl6 p-b-26">
+								Use webbrower library to pop up a new windows
+								<br>
+							</p>
+
+							<strong class="stext-117 cl5 p-b-26">
+								import os
+								<br> os.system("pkill "+"chrome")
+
+							</strong>
+
+							<p class="stext-117 cl6 p-b-26">
+								Use os library to kill the window
+							</p>
 
 
+							<h4 class="ltext-109 cl2 p-b-28">
+								Ask weather & news
+							</h4>
+							<p class="stext-117 cl6 p-b-26">
+								i applied crontab to grap weather and news information every three hours. First write an web crawler program and set up cron
+								job using crontab. Crontab is a time-based job scheduler in Unix-like computer operating systems. In the program,
+								I need to store data as JSON file, and everytime I call Jarvis for weather and news, Jarvis reads the corresponding
+								data and shows the information.
+								<br>
+							</p>
+
+
+							<p class="stext-117 cl6 p-b-26">
+								<a href="https://github.com/ArthurWuTW/jarvis">
+									<br> Code Here
+								</a>
+							</p>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/hZCY-c7JdFI" frameborder="0" allow="autoplay; encrypted-media"
+							 allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/zlMHGYwWK4o" frameborder="0" allow="autoplay; encrypted-media"
+							 allowfullscreen></iframe>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/RPv0TmH_QnU" frameborder="0" allow="autoplay; encrypted-media"
+							 allowfullscreen></iframe>
 						</div>
 
 
