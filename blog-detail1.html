@@ -236,8 +236,8 @@
 								There're three ways to communicate with Jarvis Server : Voice, Chat server, and Facebook messenger. I applied Google Speech
 								API to realize Speech-To-Text. I also wrote a chat web in Nodejs, so it is feasible to control my room as long as
 								I can connect to my wifi network. However, Facebook Messenger is much powerful. I used "fbchat" library in Python
-								to login in Facebook and keep listening to my command, and used "forever" Nodejs package to keep the program alive
-								even when the program stops.
+								to login to Facebook and keep listening to my command, and then used "forever" Nodejs package to keep the program
+								alive even when the program stops. In this way we are allowed to communicate with Jarvis in public network.
 							</p>
 
 
@@ -286,10 +286,13 @@
 							</p>
 
 							<h4 class="ltext-109 cl2 p-b-28">
-								Dynamic Public IP
+								Ask for Dynamic Public IP
 							</h4>
 							<p class="stext-117 cl6 p-b-26">
-
+								In my laptop, I've activated ssh and sftp server for server management. However, because of dynamic public IP address, I
+								am not able to connect to my server when I go outside. So, when I built a messenger bot in my laptop, I came up with
+								an idea that Jarvis maybe could send me the dynamic IP. In my home network, I used Network Address Translation (NAT)
+								to assign the public address to my laptop inside the private network.
 								<br>
 							</p>
 
