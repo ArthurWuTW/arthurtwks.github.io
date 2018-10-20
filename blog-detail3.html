@@ -177,7 +177,7 @@
 
 							<div class="flex-col-c-m size-123 bg9 how-pos5">
 								<span class="ltext-107 cl2 txt-center">
-									4
+									20
 								</span>
 
 								<span class="stext-109 cl3 txt-center">
@@ -193,25 +193,63 @@
 							</h4>
 
 							<p class="stext-117 cl6 p-b-26">
-								...
+								This is a starter implementation of YOLOv2 model for object classification and detection using a pretrained weight. My Goal
+								is to explain how YOLO algorithm works.
 							</p>
 
 							<h4 class="ltext-109 cl2 p-b-28">
-								env
+								Red Blood Cell datasets
 							</h4>
 
 							<p class="stext-117 cl6 p-b-26">
+								Reference:
 
+								<a href="https://github.com/mjDelta/yolo2-keras">
+									Datasets download
+									<br>
+								</a>
+								In RBC_dataset directory, 366 local annotations(.xml) are stored in Annotations directory, and coresponding images(.jpg)
+								are in JPECImages directory.
+
+							</p>
+
+							<h4 class="ltext-109 cl2 p-b-28">
+								Environment
+							</h4>
+
+							<p class="stext-117 cl6 p-b-26">
+								Ubuntu 16.04.3 LTS
+								<br> Anaconda3-4.5.11
+								<br> Cuda v7.5.17
+								<br> Tesla K40c
+								<br>
+								<div class="wrap-pic-w how-pos5-parent">
+									<img src="blogImage/007.jpg" alt="IMG-BLOG">
+								</div>
+							</p>
+							<h4 class="ltext-109 cl2 p-b-28">
+								<br> parse_annotation
+							</h4>
+
+							<p class="stext-117 cl6 p-b-26">
+								In preprocessing.py, parse_annotation function is to transfer all xmls into a list, and then output 'all_imgs' and 'seen_labels'
+								to count objects in all classes.
+								<br>
 								<div class="wrap-pic-w how-pos5-parent">
 									<img src="blogImage/001.jpg" alt="IMG-BLOG">
 								</div>
-
-
 							</p>
+
+
 							<h4 class="ltext-109 cl2 p-b-28">
-								<br> ...
+								<br> BatchGenerator
 							</h4>
 							<p class="stext-117 cl6 p-b-26">
+								BatchGenerator is a function to suit all YOLO augmentation needs. Its output structure is a multi-dimensional array as shown
+								below. 'x_batch' includes train (RGB) images, and 'y_batch' is the ground truth for calculating loss value. The one-hot
+								encoded 'class' in (x, y, h, w, conf, class) can also express as (x, y, h, w,conf, class0, class1, class2,...) based
+								on how many classes in datasets.
+
 
 								<div class="wrap-pic-w how-pos5-parent">
 									<img src="blogImage/002.jpg" alt="IMG-BLOG">
@@ -221,9 +259,10 @@
 
 							</p>
 							<h4 class="ltext-109 cl2 p-b-28">
-								<br> ...
+								<br>Training Work Flow
 							</h4>
 							<p class="stext-117 cl6 p-b-26">
+
 
 								<div class="wrap-pic-w how-pos5-parent">
 									<img src="blogImage/003.jpg" alt="IMG-BLOG">
@@ -232,7 +271,7 @@
 							</p>
 							</p>
 							<h4 class="ltext-109 cl2 p-b-28">
-								<br> ...
+								<br> Tensor Board
 							</h4>
 							<p class="stext-117 cl6 p-b-26">
 
@@ -244,7 +283,7 @@
 
 							</p>
 							<h4 class="ltext-109 cl2 p-b-28">
-								<br> ...
+								<br> Testing Work Flow
 							</h4>
 							<p class="stext-117 cl6 p-b-26">
 
@@ -255,7 +294,7 @@
 							</p>
 							</p>
 							<h4 class="ltext-109 cl2 p-b-28">
-								<br> ...
+								<br> Test
 							</h4>
 							<p class="stext-117 cl6 p-b-26">
 
@@ -265,12 +304,9 @@
 								<br>
 							</p>
 							<h4 class="ltext-109 cl2 p-b-28">
-								...
+								CODE
 							</h4>
-							<p class="stext-117 cl6 p-b-26">
-								...
 
-							</p>
 
 
 
@@ -282,6 +318,36 @@
 							</p>
 
 
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="col-md-4 col-lg-3 p-b-80">
+					<div class="side-menu">
+
+
+						<div class="p-t-55">
+							<h4 class="mtext-112 cl2 p-b-33">
+								Reference Link
+							</h4>
+
+							<ul>
+								<li class="bor18">
+									<a href="https://github.com/experiencor/keras-yolo2" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+										experiencor/keras-yolo2
+									</a>
+								</li>
+
+								<li class="bor18">
+									<a href="https://github.com/mjDelta/yolo2-keras" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4">
+										mjDelta/yolo2-keras
+									</a>
+								</li>
+
+
+							</ul>
 						</div>
 
 
