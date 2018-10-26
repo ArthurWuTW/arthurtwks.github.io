@@ -192,8 +192,12 @@
 								<a href="https://github.com/Shenggan/BCCD_Dataset">
 									Datasets download
 									<br>
-								</a>
 
+								</a>
+								<br> BCCD dataset contains three kind of labels: Red Blood Cell, White Blood Cell, and Platelets. In the directory there
+								are 410 images and corresponding annotation files, and we divided the dataset into training set and testing set with
+								200 images and 210 images respectively. However, in two or three annotation files(.xml), '.jpg' is missing between
+								the opening and closing tag of 'filename' that would cause errors, just adding '.jpg' manually can fix it.
 							</p>
 
 
@@ -204,7 +208,7 @@
 							</h4>
 							<p class="stext-117 cl6 p-b-26">
 
-								There are total 18 epochs and it stoped because we applied 'EarlyStopping' callback function during my training process.
+								There are total 26 epochs and it stoped because we applied 'EarlyStopping' callback function during my training process.
 								'EarlyStopping' stops training when the validation data set grows several times.
 
 								<div class="wrap-pic-w how-pos5-parent">
@@ -221,6 +225,9 @@
 							<p class="stext-117 cl6 p-b-26">
 
 
+
+								AP=80%
+								<br>
 								<div class="wrap-pic-w how-pos5-parent">
 									<img src="blogImage/0003.jpg" alt="IMG-BLOG">
 								</div>
